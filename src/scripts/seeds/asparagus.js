@@ -1,8 +1,8 @@
 export const createAsparagus = () => {
-    let asparagusObject = {
+    return {
         type: "Asparagus",
         height: 24,
         output: 4
     }
-    return asparagusObject
+    
 }

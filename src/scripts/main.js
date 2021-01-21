@@ -1,16 +1,26 @@
-console.log("Welcome to the main module")
 import { addPlant, usePlants } from "./field.js"
 import {createPlan} from "./plan.js"
-const yearlyPlan = createPlan()
+let yearlyPlan = createPlan()
 console.log(yearlyPlan)
-
 import { createAsparagus } from "./seeds/asparagus.js"
+import {createCorn} from "./seeds/corn.js"
+import {plantSeeds} from "./tractor.js"
+import {harvestPlants} from "./harvester.js"
 
 const asparagusSeed = createAsparagus()
 console.log(asparagusSeed)
 
 
-
+const cornSeed = createCorn()
 addPlant(asparagusSeed)
-let usedAsparagus = usePlants()
-console.log(usedAsparagus)
+addPlant(cornSeed)
+
+console.log(usePlants())
+
+
+
+
+let plantArray = plantSeeds(yearlyPlan)
+
+console.log(harvestPlants(plantArray))
+

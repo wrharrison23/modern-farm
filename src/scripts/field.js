@@ -1,8 +1,13 @@
 let fieldArray = []
 
 export const addPlant = (seedObject) => {
-    fieldArray.push(seedObject)
-    return fieldArray
+    if (Array.isArray(seedObject)) {
+        for (const each of seedObject) {
+            fieldArray.push(each)
+        }
+    } else {
+        fieldArray.push(seedObject)
+    }
 }
 
-export const usePlants = () => fieldArray.slice()
+export const usePlants = () =>  fieldArray.slice()
