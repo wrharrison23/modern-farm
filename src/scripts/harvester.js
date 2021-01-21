@@ -1,5 +1,3 @@
-import {plantSeeds} from "./tractor.js"
-
 export const harvestPlants = (plantArray) => {
     let harvestedPlants = []
     for (let plant of plantArray) {
